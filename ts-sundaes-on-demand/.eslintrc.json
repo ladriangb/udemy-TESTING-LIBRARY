@@ -1,0 +1,25 @@
+{
+	"extends": [
+		"plugin:testing-library/react",
+		"react-app",
+		"react-app/jest"
+	],
+	"plugins": [
+		"testing-library",
+		"jest-dom"
+	],
+	"rules": {
+		"testing-library/no-debugging-utils": "warn",
+		"jest-dom/prefer-checked": "error",
+		"jest-dom/prefer-enabled-disabled": "error",
+		"jest-dom/prefer-required": "error",
+		"jest-dom/prefer-to-have-attribute": "error",
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+		"indent": [2, "tab"],
+		"react/jsx-indent": [2, "tab"],
+		"react/jsx-indent-props": [2, "tab"],
+		"no-tabs": 0
+	}
+}
