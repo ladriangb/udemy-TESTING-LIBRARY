@@ -3,7 +3,11 @@
 This project accompanies the Udemy course
 [Testing React with Jest and Testing Library](https://www.udemy.com/course/react-testing-library/).
 
-## Mock-Ups
+## Config Jest to load tests from folder out src
+
+- [See info](./about_course/React-Testing-Library.md)
+
+# Mock-Ups
 
 ### 1. Order Summary Page
 

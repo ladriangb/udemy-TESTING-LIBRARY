@@ -14,7 +14,7 @@
  *   // => $1.50
  *
  */
-export function formatCurrency(currency) {
+export function formatCurrency(currency: number): string {
 	return new Intl.NumberFormat('en-US', {
 		style: 'currency',
 		currency: 'USD',
