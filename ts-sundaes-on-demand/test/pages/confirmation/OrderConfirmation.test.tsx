@@ -1,18 +1,17 @@
-import { render, screen } from '../../test-utils/testing-library-utils';
-import { server } from '../../mocks/server';
+import { server } from 'mocks/server';
 import { rest } from 'msw';
-
 import OrderConfirmation from 'pages/confirmation/OrderConfirmation';
+import { render, screen } from 'test-utils/testing-library-utils';
 
-test('error response from server for submitting order', async () => {
+test.only('error response from server for submitting order', async () => {
 	// override default msw response for options endpoint with error response
 	server.resetHandlers(
-		rest.post('http://localhost:3030/order', (req, res, ctx) =>
+		rest.post('http://localhost:3030/order', (_req, res, ctx) =>
 			res(ctx.status(500))
 		)
 	);
 
-	render(<OrderConfirmation />);
+	render(<OrderConfirmation setOrderPhase={jest.fn()} />);
 
 	const alert = await screen.findByRole('alert');
 	expect(alert).toHaveTextContent(

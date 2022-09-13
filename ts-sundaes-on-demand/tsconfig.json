@@ -17,5 +17,5 @@
 		"noEmit": true,
 		"jsx": "react-jsx"
 	},
-	"include": ["src", "test"]
+	"include": ["src", "test", "cypress"]
 }

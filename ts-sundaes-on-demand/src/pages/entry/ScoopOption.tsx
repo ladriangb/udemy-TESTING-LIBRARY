@@ -49,6 +49,7 @@ export default function ScoopOptions({
 				<Col xs="5" style={{ textAlign: 'left' }}>
 					<Form.Control
 						type="number"
+						name={`${name}-count`}
 						defaultValue={0}
 						onChange={handleChange}
 						isInvalid={!isValid}

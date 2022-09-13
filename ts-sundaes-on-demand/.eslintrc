@@ -1,6 +1,11 @@
 {
-	"extends": ["plugin:testing-library/react", "react-app", "react-app/jest"],
-	"plugins": ["testing-library", "jest-dom"],
+	"extends": [
+		"plugin:testing-library/react",
+		"react-app",
+		"react-app/jest",
+		"plugin:cypress/recommended"
+	],
+	"plugins": ["testing-library", "jest-dom", "cypress"],
 	"rules": {
 		"testing-library/no-debugging-utils": "warn",
 		"jest-dom/prefer-checked": "error",
@@ -13,6 +18,15 @@
 			1,
 			{ "extensions": [".tsx", ".ts", ".js", ".jsx"] }
 		],
-		"react/jsx-indent": [2, "tab"]
+		"react/jsx-indent": [2, "tab"],
+		"cypress/no-assigning-return-values": "error",
+		"cypress/no-unnecessary-waiting": "error",
+		"cypress/assertion-before-screenshot": "warn",
+		"cypress/no-force": "warn",
+		"cypress/no-async-tests": "error",
+		"cypress/no-pause": "error"
+	},
+	"env": {
+		"cypress/globals": true
 	}
 }
